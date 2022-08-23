@@ -27,8 +27,9 @@ Node*h=root->left;
 Node*T=h->right;
 h->right=root;
 root->left=T;
-h->height=max(getHeight(h->left),getHeight(h->right))+1;
+
 root->height=max(getHeight(root->left),getHeight(root->right))+1;
+h->height=max(getHeight(h->left),getHeight(h->right))+1;
 return h;
 }
 Node*turnleft(Node*root){
@@ -36,8 +37,9 @@ Node*h=root->right;
 Node*T=h->left;
 h->left=root;
 root->right=T;
-h->height=max(getHeight(h->left),getHeight(h->right))+1;
+
 root->height=max(getHeight(root->left),getHeight(root->right))+1;
+h->height=max(getHeight(h->left),getHeight(h->right))+1;
 return h;
 }
 Node*create(Node*&head,int num){
